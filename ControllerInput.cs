@@ -7,12 +7,12 @@ namespace GorillaInput
         static XRNode leftHandNode = XRNode.LeftHand;
         static XRNode rightHandNode = XRNode.RightHand;
 
-        public static bool GetInput(ControllerType controllerType, InputType inputType)
+        public static bool GetInput(bool isLeftHand, InputType inputType)
         {
             bool output = false;
             XRNode node;
 
-            node = controllerType == ControllerType.LeftHand ? leftHandNode : rightHandNode;
+            node = isLeftHand ? leftHandNode : rightHandNode;
 
             //super shitty - i'll make a better 
             switch (inputType)
@@ -32,12 +32,6 @@ namespace GorillaInput
             }
             return output;
         }
-    }
-
-    public enum ControllerType
-    {
-        LeftHand,
-        RightHand
     }
 
     public enum InputType
