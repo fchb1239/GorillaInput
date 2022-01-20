@@ -8,7 +8,9 @@ Include ```using GorillaInput;```
 
 Get controller input
 ```
-if (ControllerInput.GetInput(ControllerType.RightHand, InputType.triggerButton))
+bool isLeftHand = true;
+
+if (ControllerInput.GetInput(isLeftHand, InputType.triggerButton))
 {
   //Your code here
 }
