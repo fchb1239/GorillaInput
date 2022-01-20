@@ -2,10 +2,9 @@
 A simple library to test your mods DO NOT RELEASE A MOD THAT REQUIRES THIS!
 
 # Documentation
-Include ```GorillaInput.dll```
-```
-using GorillaInput;
-```
+Import ```GorillaInput.dll```
+
+Include ```using GorillaInput;```
 
 Get the input like this
 ```
