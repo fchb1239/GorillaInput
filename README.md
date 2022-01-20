@@ -6,7 +6,7 @@ Import ```GorillaInput.dll```
 
 Include ```using GorillaInput;```
 
-Get the input like this
+Get controller input
 ```
 if (ControllerInput.GetInput(ControllerType.RightHand, InputType.triggerButton))
 {
