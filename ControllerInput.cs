@@ -1,4 +1,4 @@
-﻿using UnityEngine.XR;
+using UnityEngine.XR;
 
 namespace GorillaInput
 {
@@ -10,6 +10,7 @@ namespace GorillaInput
         public static bool GetInput(bool isLeftHand, InputType inputType)
         {
             bool output = false;
+            float pressAmount = 0;
             XRNode node;
 
             node = isLeftHand ? leftHandNode : rightHandNode;
