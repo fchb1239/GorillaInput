@@ -18,7 +18,9 @@ namespace GorillaInput
             switch (inputType)
             {
                 case InputType.triggerButton:
-                    InputDevices.GetDeviceAtXRNode(node).TryGetFeatureValue(CommonUsages.triggerButton, out output);
+                    InputDevices.GetDeviceAtXRNode(node).TryGetFeatureValue(CommonUsages.trigger, out pressAmount);
+                    if (pressAmount > 0.8f)
+                       output = true;
                     break;
                 case InputType.gripButton:
                     InputDevices.GetDeviceAtXRNode(node).TryGetFeatureValue(CommonUsages.gripButton, out output);
